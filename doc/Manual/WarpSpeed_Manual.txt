@@ -1,0 +1,995 @@
+CONGRATULATIONS!
+
+You now own the most useful and complete cartridge utility ever produced for
+the Commodore 64 and 128 computers: the Warp Speed (TM) Accelerator Cartridge
+from Cinemaware. It contains the fastest Commodore-compatible DOS ever
+produced, allowing you to format disks, load, save, verify and copy files up to
+ten times faster than before! In addition, Warp Speed includes: a full-featured
+machine language computer-and-disk-drive monitor/assembler with up/down
+scrolling and integrated sector editor; an expanded DOS wedge for convenience
+when using a disk drive; complete support for two or more disk drives,
+including a 30-second two-drive copier for making convenient backups of your
+unprotected disks; a reset button for recovering control of your computer when
+you experience a "crash" and an "unnew' feature to restore BASIC programs after
+a reset.
+All Warp Speed functions work identically on the 64 and 128 in both 64
+emulation and 128 native modes in both 40- and 80-columns, and are fully
+compatible with most commercial software, including many heavily protected
+programs that are incompatible with other cartridge utilities. All loads,
+boots, saves and verifies as well as disk and file copies will be accelerated
+10 or more times on all 1541, 1571 or 1581 (and fully compatible) disk drives.
+Although no speed increase may be apparent, the cartridge can also be safely
+used with any other Commodore compatible disk drive that leaves the cartridge
+port open such as the MSD drives and several harddisk drives available from
+third parties.
+The 128/64 mode selection switch can also be used to disable the cartridge in
+C64 mode in those rare instances when incompatibilities with commercial
+software result.
+Whether you are a beginner, a serious hacker, or a professional developer, you
+will find Warp Speed an indispensable aid which you may never remove from your
+computer once you have it plugged in!
+
+        Copyright  1988 Alien Technology Group. All rights reserved.
+            Warp Speed is a trademark of Alien Technology Group.
+
+-01-
+
+
+INSTALLING YOUR CARTRIDGE
+
+Before installing or removing your cartridge, be sure the computer has been
+switched off. Never install or remove your Warp Speed cartridge with the
+computer switched on! You may not cause any damage to your computer system if
+you do, but do it often enough and either the cartridge or the computer itself
+will eventually cease to function.
+To activate your cartridge on a C64 (or to power up a C128 in C64 mode), slide
+the switch marked 128/64 to the 64 position. To leave the cartridge disabled on
+a C64 (should you ever want to do that for any reason), or to power up a C128
+in native 128 mode, slide the switch all the way back to the 128 position (make
+sure that the label does not interfere with moving the switch fully to the 128
+or 64 position). Then turn the computer on normally. The Warp Speed copyright
+message will appear to let you know the cartridge has been properly enabled. To
+enable/disable the cartridge fully at any time (or to switch between 64 and 128
+modes on a C128), slide the switch to the desired position and press <reset>.
+C64 owners should use the reset switch built into the Warp Speed cartridge,
+C128 owner should use the 128's built in reset switch (so that the disk drives
+are also properly reset).
+Warp Speed can be used in either 40 or 80 column mode (providing you have the
+proper video monitor and cables) on a C128. C128 users who wish to use their
+128 in 64 mode with Warp Speed disabled should set the cartridge switch to the
+128 position, and hold down the <Commodore> key while powering up or resetting.
+Holding down the control key instead will by-pass the normal disk auto-boot on
+C128s. To prevent conflicting with copy-protected programs, the DOS wedge is
+automatically disabled in 128 mode on auto-booting disks.
+
+FAST/LOAD/SAVE/VERIFY
+
+When the Warp Speed cartridge is inserted into the expansion port of your
+computer, the fast disk access routines are automatically engaged during all
+disk loads and saves. The routines will work with any application which uses
+Kernal load and save routines but not the Kernal restore routine (which resets
+the load and save vectors back to their default values). The fast load routines
+are the most compatible of any comparable cartridge-based loader and work with
+approximately 99% of all commercially available software. However, the
+fast-loading DOS can be easily disabled and re-enabled if necessary.
+
+THE SPEED AT WHICH FILES WILL LOAD DEPENDS ON HOW THEY WERE ORIGINALLY SAVED.
+Files saved with a 1541 disk drive without the aid of Warp Speed are written out
+
+
+-02-
+
+
+in a skew 10 format. This means that after each sector is written to a disk,
+nine sectors are skipped before the next sector is used. Warp Speed loads these
+files as fast as the data goes by the drive head, approximately 500% faster
+than a 1541 alone. If, however, the files were saved using a 1571 disk drive or
+with the Warp Speed fast save function, they will have been written in a skew 6
+format, skipping only 5 sectors each time, and can be loaded up to 1,000%
+faster than a normal Commodore 64. Other fast loaders can only load these files
+about 300% faster. Files will always be saved at the skew 6 format with Warp
+Speed, making the save just as fast as the load (or faster).
+Most older commercial programs were created with a 1541 disk drive, and should
+be file copied to new disks using Warp Speed so that the maximum improvement in
+loading times can be obtained. This is very easy to do using the built-in file
+copier. Warp Speed will load, save and verify at the same speed regardless of
+the type of disk drive, (or mode on a Commodore 128). The scratch and validate
+commands will work fastest if the drive is a 1571 in double-sided mode. Note:
+1581 disk drives are internally track buffered and always load and save at the
+fastest possible speed when using Warp Speed.
+
+                                 THE DOS WEDGE
+
+The DOS wedge consists of a group of commands to reduce the amount of work
+involved when using the disk drive. These commands simplify the operations of
+loading and saving flies. formatting disks,viewing directories, etc.
+LOADING FILES. To load a machine language file, use the percent <%> key
+followed by the file name and <return>. This is the same as typing load
+"filename",8,1 from BASIC. To load a program to the start of BASIC, use the
+diagonal slash </> key followed by the name of the BASIC program to load, then
+press <return>. This is comparable to typing load "filename",8. To load and run
+the first file on the disk, press the Commodore <C=> and <run/stop>keys at the
+same time (<shift><run/stop on a C128 in 128 mode). This will ALWAYS load the
+first file on a disk - we have fixed the bug in Commodore's DOS which would
+occasionally cause the wrong file to load.
+When loading from multiple drive systems. Warp Speed will search both drive 8
+and drive 9 looking for the file. If it finds the file, it will change the
+currentlv logged drive to the drive on which it found the file.
+SAVING FILES. To save a file, type the back-arrow key followed bv the name of
+the file, then <return >. This corresponds to the BASIC command save
+"filename",8. The file will be saved to the currently logged drive unless the
+drive number is specified using the BASIC form of the save command.
+
+
+-03-
+
+
+SETTING THE CORRECTLY LOGGED DRIVE. YOU CAN MANUALLY SET THE CURRENT DRIVE by
+using the number sign <#> followed by the drive number and <return>. This will
+set the default drive to use with all other DOS wedge commands. You can toggle
+between drive 8 and 9 (or drive 10 and 11) by just typing <#> and <return>.
+Typing <##> will print the number of the currently logged drive to the screen
+without changing it.
+
+VERIFYING FILES. To fast-verify a file, type an exclamation mark <!> followed
+by the name of he file, then press <return>. This is equivalent to the BASIC
+command verify "filename",8,1. This feature can be used in one of two ways. It
+can be used immediately after saving a file to make sure the image on disk
+matches the file in memory. Otherwise, it can be used to verify that a file on
+the disk is intact and contains no errors, and to show it's start and ending
+addresses, without actually loading the file into memory. In this case, ignore
+the "VERIFY ERROR" message, as this is normal (it just means that you don't
+have the file in memory). Any other message indicates a problem with that file.
+
+BOOTING FILES. To load and run a binary (machine language) file whose execution
+address is the start of the file, you can use the asterisk <*> key followed by
+the name of the file to boot and <return>. This is the equivalent to the C128's
+boot "filename" command but it is also available in C64 mode.
+LISTING FILES AND DIRECTORIES. You can list any normal text file to the screen
+using the ampersand <&> key followed by the name of the file and <return>.
+There is no equivalent BASIC command to do this, but it is similar to the
+MS-DOS "TYPE" command. To new the directorv of a disk, type a dollar <$> sign
+then return. The directory will be printed to the screen without affecting
+program memory. In both cases, you can pause the listing and restart it by
+using the spacebar, or exit at any time using <run/stop>. Typing two dollar
+signs in a row, as in <$$> <return> will list the name of the disk and the
+total number of unused blocks remaining on the disk. You can also include
+parameters after the dollar sign to limit the directory display to files which
+match the parameters. for example <$tr*=s> <return> would only list the entries
+for sequential files beginning with the letters "tr". You can use any of the
+previous DOS wedge commands with the directory display created with the <$>
+command, by typing the appropriate command letter at the start of the line
+containing the directorv entry for the file you want to load. save, verify,
+type or boot. You do not have to erase the extra characters on the screen such
+as the file size, the built-in routines will look for the quote marks
+surrounding the file name, and ignore anv extra data on the line if it finds
+them.
+ACCESSING THE DRIVE COMMAND CHANNEL. The commercial "at" <@> key followed by
+<return> will print the current drive error status to the screen. This is the
+equivalent of doing an open 15,8,15 from BASIC and reading the error channel.
+You can also send a command to the drive in this way. See the
+
+
+-04-
+
+
+following section on formatting disks or the section on Drive Commands for more
+information on using the drive command channel. For additional information on
+this subject, be sure to read the user's guide which came with your disk drive,
+as the drive commands are well documented there with many examples.
+FAST-FORMATTING A DISK. To fast format (new) a disk, type <@> <f> <return> then
+answer <y> to the "are you sure?' prompt. This is equivalent to the open
+15,8,15,"n0:diskname,id":close15 BASIC command, and executes a fully-verified
+fast format (which will erase anv previous data that may have existed on your
+disk). You can include a disk name or disk ID in the command if you desire, as
+in <@ > <f0:mydisk,id>, but it is not required. If you have a 1571, the disk
+can be formatted as either single- or double-sided, by setting the drive to the
+appropriate mode. Sec the following "Utility Commands" section for information
+on setting single- or double-sided mode.
+ENTERING THE MAIN MENU OR MACHINE LANGUAGE MONITOR. To enter the main menu use
+the english pound <œ> key followed by <return>. To enter the built-in
+machine language monitor, use the pi <pi> key and <return>.
+
+UTILITY COMMANDS
+
+Several additional utility commands which start with the up-arrow <up-arrow>
+key can be used from BASIC or from the DRIVE COMMAND feature in the menus. They
+are also available from the machine language monitor (described later) when
+preceded by the commercial "at" <@> character
+The disk menu command, <up-arrow$>, will load the directory into the computer's
+memory and will allow you to scroll up and dpwn through the directory to select
+a file to load and/or run. This feature is also available from the menu
+functions on the FILE UTILITIES sub menu. This command is particularly useful
+when you have a very long directory to search through (such as on a very full
+disk or on a 1581 drive). It takes the same amount of time to load the
+directory into memory with this command as it would to print the entire
+directory to screen with the DOS wedge <$> directory command, so there is a
+short delay before the directory is displayed after issuing this command.
+Because the directory must be loaded into the computer's memory in order to be
+able to scroll through it, any BASIC program currently in memory will be
+overwritten by the directory data.
+Once the directory has been displayed, use the cursor up/down kevs to highlight
+the file you wish to use. Then press the diagonal slash </> key to load and run
+a BASIC program. or <return> to start a self-booting machine language program.
+Other options available are the asterisk <*> key to execute a "boot" (see the
+explanation of the "*" command in the DOS wedge section), <up-arrow> to re-load
+the directory (if you change disks), or <run/stop> to exit. The "*more*"
+
+
+-05-
+
+
+prompt will appear if the directory is longer than will fit on the screen.
+Simply use the cursor keys to scroll the display up or down as needed.
+The kill fast-dos command, <up-arrow k>, disables only the fast loader -- all
+other functions, including the DOS wedge, will remain active. This command must
+be issued before attempting to load Quantum Link(tm), for example, as the
+Q-Link program does not tolerate any sort of fast loader to be active, and will
+hang if it detects that you are using one. Use the enable fast dos command,
+<up-arrow e>, to re-activate and reset the fast load, fast save and restore
+(NMI) vectors.
+The colors command. <up-arrow c> can be used to reset the screen colors to
+their default values and clear the screen. This is useful in two different
+situations. One is when ,&~u accidentallv break out of a program and the screen
+is left in an unreadable mode. such as multi-color or bit-map (graphics) mode.
+The other is when booting a program which assumes that the default screen
+colors are present and changes the text color to black, while leaving the other
+colors untouched. Since black letters on a black background are difficult to
+read, we added this command so you can set things back to Commodore standard
+before booting such a program.
+The unnew command, <up-arrow u>, can be used to restore a BASIC program after a
+new command, or after using the reset button to recover from a crash.
+The re-number drive command, <up-arrow r>, or <up-arrow r> <drive number> can
+be used to temporarily change the device number of the currently logged drive
+to another number. If, for example. you had two disk drives, both set as drive
+number 8, you could turn one off, then use the <up-arrow r> command to change
+it to be drive 9, then power up the second drive (which will still be drive 8)
+and have a powerful two drive system work with.
+Thc screen hard-copy command. <up-arrow h>. will print a copy of the screen
+contents to a printer designated as device number 4 (text screens only). When
+used with the DOS wedge type file <&> command, it can be used to print out a
+short text file without having to load up a word processor! (This feature is
+also great for printing those "readme.doc" files that come with many public
+domain programs.) Note: Printout will occur in uppercase/lowercase mode, rather
+than uppercase/graphics. This is the same mode you get on a Commodore 64 when
+you press <shift> and < Commodore> at the same time.
+Owners of 1571 disk drives will appreciate the set format commands, <up-arrow
+s> and <up-arrow d> for single- and double-sided modes, respectively. These
+commands will alloww you to use a 1571 in single- or double-sided mode
+regardless of whether you are working with a C64 or C128, and regardless of
+what mode you are in. We recommend placing the drives in double-sided mode at
+all times, especially when scratching a file or validating a disk, as these
+processes will go much faster when the drives are in double-sided (2 Mhz) mode.
+A few exceptions to this rule are: don't place a 1571 in double-sided mode when
+loading most copy-protected
+
+
+-06-
+
+
+Commodore 64 software, don't place them in double-sided mode when working with
+"flippy" disks, and don't place them in double-sided mode if you intend to
+format a disk as single-sided, as both our fast-format and Commodore's own
+format routines use the drive's current mode to determine whether to format the
+disk as single- or double-sided. If your 1571 drive has trouble initializing or
+reading a single-sided disk when set to double-sided mode, then you should
+contact Commodore to obtain their upgraded drive ROMs, which are considerably
+improved over the original ones and have fixed this problem, or set the drive
+back to single-sided mode.
+
+Using the Menu Functions
+
+The english pound key, "f", activates the built-in menu-driven features of Warp
+Speed. Upon entering the menu system, the Main Menu will appear. There are nine
+options to select:
+1.  View Directory
+2.  Sector Editor
+3.  File Utilities
+4.  Single Copier
+5.  Dual Copier
+6.  Drive Command
+7.  Set Drives
+8.  ML Monitor
+9.  Quit To BASIC
+Select the desired option by moving the highlighted cursor up or down with the
+cursor keys and then press <return>; or you can choose an option by pressing
+the number key corresponding to the option you wish to select. Two other keys
+are also active in the menu system: the "Q" key can be used to exit directly to
+BASIC no matter what level of menu you are in, while the spacebar by itself can
+be used to swap source and target disk drive assignments and a shifted-space
+will set the target drive to be the same as the source drive.
+Here are brief descriptions of the nine main menu choices available.
+1. VIEW DIRECTORY
+Use this function when you want to display the current source and target disk
+directories on the screen. If the directories are too large to fit on the
+screen at one time, the screen will scroll. You can pause the listing at any
+point by using the spacebar, pressing it again will allow the listing to
+continue. You can terminate the directory listing at any time with the
+<run/stop> key, if you have two drives you may have to press it twice (once for
+each directory). Use <q> to return to the Main Menu.
+
+
+-07-
+
+
+2.  SECTOR EDITOR
+Use this option when you want to edit a data or program file without loading
+the complete file into memory first, or to change something in the disk
+directory (such as the spelling of a file name or to lock or unlock a file).
+See the following section for more information on using the sector editor, or
+the summary pages for a listing of the available commands. Use <q> to return to
+the Main Menu from the sector editor.
+3.  FILE UTILITIES
+Choosing this option will bring up a second menu of choices for file handling.
+From this new menu, you can automatically copy one or more files, scratch
+(delete) one or more files from a disk directory, select a file from the disk
+auto-menu feature, use a drive command (to validate or format a disk, for
+example), set your source and target drive assignments, or return to the Main
+Menu. If you arc working on a double-sided disk, be sure to use the <up-arrow
+d> command to set the drive(s) into double-sided mode. See the list in the
+command summary for an explanation of the commands available in the sub-menu
+selections. Note: The largest file which can be copied by the file copier is
+limited by the available RAM, and will further be affected by the size of the
+disk directory of the source drive, which is also stored in RAM during the copy
+process (and which can get very large, especially for 1581 users). If you
+attempt to copy a file larger than the available RAM (approximately 220 disk
+blocks max), the copy will fail, and you may have to press the RESET button to
+regain control of your computer. Special Note: the File Copier is the ONLY way
+to back up 1541/1571 disks to or from a 1581. We intentionally did not create a
+way to copy whole 5 1/4" disks to a 1581, as this 1) this wastes over half the
+1581's storage capacity (1581's have 40 sectors per track versus a 1541's 17 to
+21) and 2) required more room for code than we had available in our cartridge
+ROM and 3) would not have been that much faster than using the file copier to
+do the same thing. You are better off creating a sub-directory for your 5 1/4"
+disks on a 1581 and file copying your data to it. See the user's guide which
+came with your 1581 for information on how to create and use sub-directories on
+your 1581.
+4.  SINGLE COPIER
+Select this function when you wish to copy a single- or double-sided disk using
+one or two disk drives, or to copy a 1581 disk (using either one or two 1581
+disk drives). This copier compresses the data during the read process, so many
+1541 disks which are not completely full can be copied in only one or two
+passes. This utility also verifies both the source and target disk for bad
+sectors. If you have a source disk which this copier will not copy (because of
+an error on the diskette), then you ~ll have to format a new disk, and use the
+file copier (in the File Utilities menu) to copy all of the files which are
+still intact from the damaged disk to the new disk. Note: Double-sided disks
+can, of course, only be copied on a
+
+
+-08-
+
+
+1571 disk drive. You must also use the SET FORMAT option from the copier
+sub-menu to change the setting from SINGLE to DOUBLE in order to copy both
+sides of a 1571 diskette. A 1581 disk can only be copied to another 1581 disk.
+You cannot mix a 1541/1571 and a 1581 with this copier, but you can use two
+1581's together. Both sides of a 1581 disk will be copied regardless of the
+SINGLE or DOUBLE setting.
+5.  DUAL COPIER
+Choosing this option will activate a sub-menu similar to the one for the Single
+Copier (above). As its name suggests, you need two disk drives to use this
+nibble-type copier which can copy either single- or double-sided disks (with
+two 1571 drives) in approximately 30 seconds per side. If you want to copy a
+double-sided disk with this copier, you must use the SET FORMAT option from the
+sub-menu to switch from SINGLE to DOUBLE (even if the drives are already in
+double-sided mode). This copier, while extremely fast, is not as reliable as
+the fully verified single copier described above. It is, however, write
+verified, so that it will report any errors created during the copy process. If
+you have difficulty copying a disk with this copier, try switching your source
+and target drives. If this still does not enable you to make a working copy,
+then you will need to use the Single Copier with this disk or this hardware.
+Note: This copier is designed for copying only unprotected software, and will
+not copy diskettes which are copy-protected. It will not work with two 1581's,
+use the Single Copier for that.
+6.  DRIVE COMMAND
+Use this menu option when you want to send a command to the drive or read the
+drive status. Press <return> to get the error status; or enter any drive
+command by pressing the letter of that command followed by <return> (see Drive
+Commands). You can also enter any of the utility commands at the ">" prompt
+(the commands which begin with an up-arrow). Be sure to include the "up-arrow"
+when entering these commands. Press <#> <return> to select a different drive.
+Press <q> to return to the main menu.
+7.  SET DRIVES
+Allows you to select the source and target drives for the file copier, disk
+copiers and sector editor.
+8.  M.L. MONITOR
+Enters the machine language monitor (see Machine Language Monitor later in the
+manual). You can return to the main menu from the ML Monitor by using the "xm"
+command.
+9.  QUIT TO BASIC
+Exits the menu system and returns you to BASIC.
+
+
+-09-
+
+
+Drive Commands
+
+Drive commands are commands that may be used directly from the Drive Command
+option of the menu system, or (when preceded by a commercial "at" <@>) from the
+DOS wedge or machine language monitor. These commands are detailed in the
+manuals that come with your disk drive. A few of the more useful ones are:
+<@f>, which does a fully verified fast-format; <@Uj>, which resets a disk drive
+as though it had just been turned on; <@v>, which validates a disk to eliminate
+bad "*prg" (splat) files from a disk directory and clean up the block
+availability map (BAM) on heavily used disks; <@s0:> <filename>, which will
+scratch (delete) a file from the disk, and <@r0:> <newname = oldname> which can
+be used to change the name of a file on a disk from "oldname" to "newname". The
+"@" symbol by itself will read the disk drive error channel and report the
+status of the disk drive. The "greater than" symbol ">" can be used in place of
+the "@" symbol, if you prefer. Do not include either symbol, however, when
+using the Drive Command option from the menu system (it's already there for
+you.)
+
+Perhaps the most powerful features of the Warp Speed cartridge are the sector
+editor and machine language drive monitor. They have been integrated together
+to make a very powerful program creation, de-bugging and editing tool. To make
+the most use of these features, it is helpful to know the hexadecimal numbering
+system.
+
+Sector Editor
+
+To enter the sector editor from BASIC, use the english pound <œ> and
+<return> to activate the main menu and first choose 7.SET DRIVES from the
+available options to set the source and target drives, then choose 2.SECTOR
+EDITOR to activate the sector editor. Entering the sector editor from the menu
+system will clear the editing buffer from $7E00 to $7EFF and set the default
+track and sector to track 18 sector 1 (the start of the 1541/1571's directory
+-change these numbers to track 40 ($28) sector 3 if you want the start of a
+1581 directory). From the machine language monitor, you can enter the sector
+editor with the <xs> command. Entering the editor in this way will not clear
+the buffer or change the current track and sector settings, so you can go back
+and forth between the editor and ml monitor as often as you like to modify a
+file by tracing the file a sector at a time using the sector editor, making any
+changes you need from the ml monitor, and then returning to the sector editor
+to write the modified data out to disk, without having to load the entire file
+into memory first.
+
+
+-10-
+
+
+To read a sector, type <r> <track> <sector> (where track and sector are two
+digit hexadecimal numbers), or just <r> <return> <return> if both of the
+default values are o.k. The desired track and sector will be read and the
+contents transferred from the disk drive to the editing buffer at $7E00 in the
+computer. Similarly, to write a sector back to a disk, use the <w> command.
+To edit a sector, move the cursor to the desired position with the cursor keys,
+then enter the new value in hexadecimal. Because of the size of the screen,
+only half of a sector will be visible at a time. To see the other half, simply
+move the cursor off the top or bottom of the data and the other half will
+scroll on. If you are makihg changes to text, you can simply type in the
+desired letters by pressing <t> to enter text mode. The <run/stop> key is used
+to exit text mode.
+Several keys allow you to move to a different sector on a disk, <+> will
+advance you to the next sector, <-> will move you back one sector, <shift> <+>
+will advance you one track, while <shift> <-> will move you back one track. The
+<n> key will allow you to trace a file by moving you to the "next" track and
+sector of that file (as pointed to by the first two bytes in the sector). The
+<j> key will 'jump't to the track and sector pointed to by the bytes currently
+under and immediately following the cursor. This can be used to move to the
+beginning of a file from the pointers located in the directory, so you can edit
+a file without ever having to manually enter a track or sector!
+At any time, if you wish to enter the machine language monitor to disassemble
+or edit the data, use the <m> command. Remember to exit back to the sector
+editor with the <xs> command so that your changes won't be erased from the
+buffer.
+If you have a Commodore printer attached as device 4, you can print out the
+entire sector contents with the <p> command. This is not merely a screen dump,
+both halves of the sector display will be printed together. If you are in the
+second half of the sector data, pressing <home> once will move the cursor to
+top of the screen editing area. Pressing it a second time will move you to the
+start of the sector data. Pressing <clr/home> (<shift>-<home>) will erase the
+buffer (fill it with zeroes) from the cursor position forward to the end of the
+sector. Pressing <q> will exit the sector editor. The <run/stop> - <restore>
+combination will always return you to BASIC (without crashing the machine as
+with most other cartridges).
+One very powerful (but somewhat dangerous) feature of this sector editor is its
+ability to read a sector from one drive and write it out to another. BE CAREFUL
+NOT TO DO THIS ACCIDENTALLY! You must set your source and target drives from
+the main menu before entering the sector editor -- there was no room in our ROM
+to make this command available from within the sector editor itself. If you
+find that you don't have the correct target drive set, and you aeC already in
+the sector editor, you can use the spacebar to switch source and
+
+
+-11-
+
+
+target drive assignments, or use a shifted-space to set the target drive to
+equal the source drive. Please be careful you don't accidentally do this as
+well! A well-placed write-protect tab can save you many headaches by protecting
+you from such mistakes.
+
+Machine Language Monitor
+
+The machine language monitor is one of the most advanced monitors ever produced
+for the Commodore 64 and 128. It was designed to be extremely flexible and
+accept the syntax of most other previously available monitors, for example, you
+can separate most parameters with spaces, commas, shifted spaces or sometimes
+no spaces at all. All numerical entries in the monitor must be in hexadecimal
+and entered as two or four byte values, and (except for the assemble command)
+do not take the "$" symbol. As you become more familiar and comfortable with
+the ml monitor, you may wish to re-read the examples included here for "expert"
+techniques which can save you time and labor.
+To disassemble memory, type <d> followed by addresses to start and end the
+disassembly at; for example D 1000 1050 will disassemble memory starting at
+$1000 and ending at $1050. You can pause and resume the disassembly at any time
+using the spacebar, or terminate the disassembly with <run/stop>. If you leave
+off the second address, such as D 1000 , then disassembly will start at $1000
+and continue until you press the stop key or the end of memory is reached.
+Typing <d> by itself will continue disassembly from the last address displayed
+for about one-half a screen page and then stop. The <m> command (display memory
+in hexadecimal) and the <i> command (interpret memory in Ascii) work
+identically, except for the display format. You can also use the cursor up and
+down keys to scroll forward or backward through memory. The following examples
+show the use of these commands:
+
+D C000 D000           disassemble from $C000 to $D000
+M,C000,D000           display memory from $C000 to $D000 in hex
+                      (note use of optional comma separators)
+IC000D000             interpret Ascii from $C000 to $D000
+                      (note optional lack of spaces between values)
+D C000                disassemble from $C000 onwards
+M                     display memory from current address onwards
+                      for half of one screen page
+
+
+-12-
+
+
+You can use the <m> command to edit memory contents by typing over the display
+and pressing <return>, and you can terminate a line with a colon so that the
+rest of the information on that line will be ignored. For example, to display
+and edit one byte of memory at $D020, without affecting the bytes which follow,
+you would type the following:
+
+M D020 D021
+
+and the display would show:
+
+.: D020 F6 F0 Fl F2 F3 F4 FO Fl
+
+
+If you were then to type over the line like this:
+
+.:D020 Fl:Fl Fl Fl Fl Fl F1 Fl ........
+
+and then pressed <return>, you would get:
+
+.:D020 Fl FO Fl F2 F3 F4 FO Fl
+.: D028 _
+
+and the border would turn white, indicating that the ml monitor had accepted
+the new value at $0020 (the VIC border color register) but had ignored the
+remainder of the input line. Two spaces in a row can be used instead of a
+colon, if desired, to terminate an input line.
+As the last example shows, whenever you type over an existing display value in
+the monitor, that value is modified and the line is reprinted. Then the next
+address is displayed and the cursor positioned for new input. This can be used
+effectively to move selected memory contents from one address to another. The
+following example demonstrates this feature. Suppose, for example, you wanted
+to update a copyright notice in your file and change the date or name. Let's
+say the previous notice was located in memory at $2020 and said "(C) XYZ CO.
+1987" and you wanted to change it to "(C) XYZ INC. 1988". Since there is no
+easy way to enter text from the ml monitor, you decide to use the text mode of
+the
+
+
+-13-
+
+
+integrated sector editor instead. The following example shows how you might do
+this. First you would enter:
+
+M 2020 2028 <return>
+
+and the computer would show:
+p
+.:2020 28 43 29 20 58 59 5A 20 (C) XYZ
+.:2028 43 4F 2E 20 31 39 38 37 Go. 1987
+
+Now type over the $2020 address and replace it with $7E00, like this:
+
+.:7E00 28 43 29 20 58 59 5A 20 (C) XYZ
+
+and press <return>. This will move a copy of the data to the sector editor's
+editing buffer. when you press return, the new address of the second line will
+be automatically computed and printed over the former value of $2028. Press
+<return> again, and the next line will be transferred to $7E08 - $7E0F. Your
+display would now look like this:
+
+.:7E00 28 43 29 20 58 59 5A 20 (C) XYZ
+.:7E08 43 4F 2E 20 31 39 38 37 CO. 1987
+.:7E10
+
+Now press <return> to exit the <m> display mode and type <xs> to enter the
+sector editor. The display will change to the normal sector editor display, and
+the first two lines will have the old copyright message on them. Cursor over to
+the "C" in "CO." and press <t> to enter text mode. Now you can type in your new
+text, "INC 1988". Press <run/stop> when you are finished typing and then <m> to
+return to the ml monitor. Entering M 7E00 7E10 <return> should reveal the
+modified text, which you can transfer back to $2020 using the same procedure as
+we used to move it from $2020 to $7E00 in the first place, namely cursor up and
+type over the $7E00 and enter $2020, then press <return> twice to copy the two
+lines. Since your new text is one byte longer than your original, you will have
+to press <return> one more time, but before you do, add a colon after the $38
+(as in 1988) to limit the line to the exact number of bytes you want to move
+(one), then press <return>. As this example illustrates, integrating the sector
+editor with the ml monitor can have unexpected benefits.
+Additionally, it is not necessary to use the <m> command to first display
+memory before modifying it in this way. You can simply use the colon <:>
+
+
+-14-
+
+
+followed by the address to change and one or more bytes to enter, then press
+<return>. For example tyhping the following line will change the screen colors
+back to normal (default) Commodore colors:
+
+:D020 0e 06 <return>
+
+Like the <m> command, the <d> command will also allow you to change memory
+contents, or copy code from one location to another. Feel free to experiment,
+and let us know if you find any interesting tips or tricks!
+To compare two areas of memory, use the <c> command followed by the start and
+end address of the first block of memory followed by the start address of the
+second block to compare to, as in C 8000 9FFF A000 to compare the block at
+$8000 to $9FFF with the block at $A000 to $BFFF. Any addresses in the first
+block which differ in content from the corresponding addresses in the second
+block will be printed to the screen. You can use the spacebar to pause or
+<run/stop> to abort the listing. You can also fill an area of memory with a
+constant value aby using the <f> command followed by the starting and ending
+addresses of the memory block and the value to fill with, as in F 0400 07FF 20
+which will fill the screen memory area at $0400 to $07FF with $20's (spaces).
+The <back arrow> key followed by a value will set the configuration (bank
+select) register to the new value. This register is location $01 on a C64 and
+$FF00 on a Commodore 128 in 128 mode. For example, <back arrow>34 on a C64 will
+bank out the BASIC and KERNAL ROMs as well as the I/O block at $D000 to allow
+you to access all 64K of the RAM in the C64 from the monitor. Using either
+<backarrow> 00 or <backarrow> 01 in 128 mode will allow you to do the same
+thing on a C128 for RAM banks 0 and 1, respectively.
+The <r> command will display the current processor register and configuration
+register values, as well as the current value of the system IRQ pointer at
+$0314/$0315. These are the values which the processor will use if you issue a
+<g> command to go (execute) a routine, as in G FCE2 to reset a Commodore 64. If
+you wish the routine being called to return to the monitor on completion, then
+end it in a BRK instruction. An RTS instruction would return you to BASIC. Any
+BRK instruction will automatically execute a register display upon entry back
+into the monitor.
+YOU CAN HUNT FOR A SEQUENCE OF BYTES in memory with the <h> command, as in H
+E000 FFFF 8D 00 DD which will hunt through the Kernal ROMs for all occurrences
+of the sequence $8D $00 $DD. You can move a block of code from one memory
+location to another using the transfer <t> command, as in
+
+
+-15-
+
+
+T 1000 1FFF 1002 to move the data which presently sits at $1000 to $1FFF to the
+new location of $1002 to $2001. Note that you can move blocks up or down in
+memory and overlap their current locations without worry, the cartridge uses a
+"smart move" algorithm that won't accidentally turn into a fill command. Two
+additional versions of the transfer command, <td> and <tc>, will transfer
+blocks of memory to and from disk drive memory, respectively. Just remember "To
+Drive" and "To Computer"!
+To redirect all output from the screen to a printer attached as device number
+4, use the <p> command to toggle the printer output on and off. While output is
+redirected to the printer, no screen printing will occur.
+The monitor includes a mini-assembler, which is accessed by the <a> command, as
+in A1OOOLDA#$01 which will assemble the instruction LDA #$01 to $1000. Spaces
+here are optional. All operands in the assembler must be entered as two or four
+byte hex numbers, and be preceded by the "$" symbol. You can add a colon at the
+end of a command line as a terminator so that any additional text on the screen
+will be ignored. To exit the assembler, just press return on an empty line.
+The <o> I/O command is used to switch between programming in the computer
+memory and disk drive memory. Use o 08 to access drive 8 RAM, for example, or o
+by itself to return to computer memory. Remember to enter the drive number in
+hexadecimal for drives 10 or 11. All of the monitor commands are available when
+programming in the disk drive except <r> (register display) and <backarrow>
+(bank select).
+The <$> command will list the directory of the currently logged drive to the
+screen. <@#> can be used to log on a different drive, as in @#0A to set drive
+10 as the default drive. As in the DOS wedge, the <@> command is used to read
+or write to the drive's error (command) channel. All of the utility (up-arrow)
+commands are available from the monitor, provided you precede them with a
+commercial "at" (@), as in @<uparrow>R09 to renumber the currently logged drive
+to drive 9 (see Utility Commands).
+The load, verify and boot commands all work identically. The syntax is <l> (or
+<v> or <b>) followed by the filename (in quotes) followed by an optional drive
+number and an optional address (for relocated loads). A few examples should
+make this clear. Entering L "MYPROGRAM" 1234 would cause the program named
+"MYPROGRAM" to load from the currently logged drive and cause it to relocate
+(start loading at) $1234. If the program "MYPROGRAM" was not on the current
+drive, the cartridge would automatically search for it on a second drive, if
+you had one, and load it from there. If you had typed L' "MYPROGRAM" 09 1234
+then the cartridge would have looked on drive 9 first (though it would still
+have checked drive 8 if the file was not on drive 9). If
+
+
+-16-
+
+
+you had left off the "1234" in either command, then the file would have loaded
+to its normal (default) load address, normally the same address from which it
+was originally saved. Because our monitor requires that you put the filename in
+quotes, you can have any text you like between the command letter and the
+filename, and it will be ignored. This is very useful if you have just used the
+<$> command to list the directory to the screen, just cursor up to the line
+containing the filename and type L,V or B at the start of the line and the
+corresponding file will be loaded, verified or booted. If you relocate a load
+with the boot command, the file will start executing from its new load address.
+If the file was not designed to be relocatable (or even to be "bootable"), the
+program may not execute properly if you do this.
+The <s> save command also works similarly. The command format is <s> followed
+by the filename (in quotes) then an optional drive number, then the starting
+and ending addresses of the memory block to be saved, followed by an optional
+new load address for the file. For example S"YOURPROGRAM" 08 1234 5678 9ABC
+would take the area of memory from $1234 to $5678 (inclusive) and save it to
+disk drive 8 with the filename "YOURPROGRAM" and give it a default load address
+of $9ABC. This is the only Commodore monitor of which we are aware which will
+allow you to relocate saves, which is most useful when creating files which
+will eventually be loaded to inconvenient places like screen memory or the
+stack. As in the load command, the drive number is optional, however if you
+have more than one disk drive, it is a good idea to include it to prevent
+accidentally saving the file to the wrong disk. If you don't specify a disk
+drive number, the default (currently logged drive) will be used.
+Finally, there arc five ways to exit the monitor! The <q> command will return
+to BASIC, and restore the BREAK vector back to its normal power-up value
+(pointing to BASIC Warm Start on a C64 and Commodore's monitor on a C128 in 128
+mode). The <x> instruction will also exit to BASIC, but the BREAK vector will
+remain set to re-enter the cartridge monitor for debugging purposes. <xs> will
+exit directly to the sector editor (without initializing the sector editing
+buffer). <xm> will exit to the cartridge main menu, and <xc> will cause a cold
+start of BASIC (clearing the BREAK vector in the process).
+
+
+-17-
+
+
+Hexadecimal Numbers
+
+Many operations involving computers use a form of numbering called
+"hexadecimal' which can be very confusing to someone who has never seen them
+before. In fact, hexadecimal numbers are often the biggest obstacle to learning
+to program in machine language for most beginners. Yet hexadecimal numbers
+(called "hex" for short) are actually very convenient for programmers -- that's
+why you see them so often -- and are not really very difficult to learn.
+To understand hex, you must first look at "normal" decimal numbers. In decimal
+numbers, there are 10 digits, 0 through 9. That's why it's called decimal,
+because "deci" means ten. Our decimal numbering system is based on the arabic
+place-value system, which unlike the early Roman numbering system, assigns a
+value to a digit based on its place within a number. For example, the numbers
+12345 and 54321 both contain identical digits, but they certainly aren't equal!
+The difference we perceive in these two numbers depends on the placement of the
+digits within the number. In the first case, the "2" stands for two thousand,
+in the second place, for twenty. To obtain the "real" value of the digit, we
+multiply the digit by 10 (remember, its a decimal numbering system) several
+times. How many times depends on the digit's position. In the first case, we
+multiply it by 10 three times, (2*10*10*10) because there are three places to
+the right of the digit. In the second case, we only multiply by 10 one time,
+since there is only one digit to the right of the "2".
+
+Hexadecimal numbers are also based on the place-value system. "Hex" means six,
+and "deci" means ten, together that adds up to sixteen, and that's what it
+means. Funny, we still add the parts of the word together the way the Romans
+added the parts of their numbers together! Sixteen is the magic number that
+makes "hex" work. First there are sixteen digits. That's right, the first ten
+are still 0 through 9. But since we have no single digits that represent the
+values ten through fifteen, programmers substituted other symbols from their
+keyboards, and what they chose, logically enough, and in order, were the
+letters "A" through "F". So now, if you see a single digit "hex" number, you
+can immediately determine it's value. For example, the value of $A is ten (the
+dollar sign in front is just their to help remind everyone that this is a hex
+number and not a letter or decimal number). Multi-digit numbers work the same
+way, except that instead of multiplying by ten, we now multiply by, you guessed
+it, sixteen. For example, the hex number $FO is just fifteen times sixteen, and
+the number $FOO is fifteen times sixteen times sixteen (we multiply by sixteen
+as many times as there are digits to the right of the one we are working with).
+Just as you might talk of there being a "tens" place and a "hundreds" place in
+decimal numbers, there are
+
+
+-APPENDIX  I  -
+
+
+"sixteens" places and "two hundred and fifty-sixes" places in the same
+positions in hexadecimal numbers. So the number $F4E3, which looks very
+complicated, is really only another way of saying fifteen (the "F") times
+sixteen times sixteen times sixteen added to four (the "4") times sixteen times
+sixteen plus fourteen (the "E") times sixteen plus three. Written out in
+decimal, that's (15*16*16*16) + -(4*16*16) + (14*16) + 3, and that equals
+62691. With a little practice, you'll soon be able to do these conversions in
+your head!
+
+
+-APPENDIX  II -
+
+
+More Information
+
+If you would like more information on programming your computer or using vour
+disk drive, please consult the following publications.
+
+1541 (or 1571 or 81 User Guide  Commodore (Strongly Recommended.)
+
+Also:
+
+The Anatomy of the 1541 Data Beckcr/Abacus Software
+
+Commodore 1571 Internals               Data Becker/Abacus Software
+Inside Commodore DOS                   Reston Publishing Company
+Commodore Programmer's Reference       Howard W. Sams & Co.
+Commodore 128 Programmer's Reference   Bantam Computer Books
+Mapping the Commodore 64 & 64C         Compute! Books
+Commodore 128 Internals                Data Becker/Abacus Software
+Programming the 6502                   Sybex
+
+Acknowledgements
+
+We would like to thank the following people for helping to make Warp Speed a
+reality:
+
+Dave Morelli
+Fred Wasserman
+Bob and Phyllis Jacob
+Eric Roberts
+Jason Ranheim Company
+and all the people who wrote in to comment on version 1.0! We hope you like
+this new version-
+
+Credits
+
+Programming: Marty Franz, Joe Peter and Harald Seeley
+User Manual    Harald Seeley
+
+About ATG
+
+Alien Technology Group is a small development company dedicated to extending
+the "state of the art" in computer game and utility software. If you think you
+would like to participate in that effort, write us at
+ATG, 10264 Jeraback Drive, San Diego, CA 92131
+
+
+-APPENDIX  III-
+
+
+Monitor Command Summary
+
+All items in parentheses ( ) are required. Items in brackets <> are optional.
+Commas are used to separate lists of items from which only one can be chosen.
+
+Command                            Format
+
+A Assemble Command      A (address) mnemonic <operand>
+
+B Boot a file           B (filename") <Drive #> <address>
+
+C Compare Memory        C (start address) (end address) (compare address)
+
+D Disassemble           D <start address> <end address>
+
+F Fill Memory           F (start address) (end address) (value)
+
+G Go (execute)          G (address)
+
+H Hunt                  H (start address) (end address) (val 1) <val x>
+
+I Interrogate (ascii)   I <start address> <end address>
+
+L Load                  L (filename") <Drive #> <address>
+
+M Memory (hex)          M <start address> <end address>
+
+O I/O                   O <Drive #>
+
+P Printer Toggle        P
+
+Q Quit                  Q
+
+R Register Display      R
+
+S Save                  S (filename") <Drive #> (start address) (end address) <load address>
+
+T Transfer              T <D,C> (start address) (end address) (new address)
+                           (D)rive or (C)omputer
+V Verify                V ("filename") <Drive #> <address>
+
+X Exit                  X<S,M,C>
+back-arrow Configure    back-arrow (val)
+$ Directory             $<pattern><=S,=P>
+
+@ Drive Cmd @uparrow S, uparrow D, uparrow $, uparrow R, uparrow H, uparrow K,
+  uparrow E, uparrow U, #<D#>, $,I,U,J,U9,F,N,V>
+
+
+-APPENDIX  IV -
+
+
+ DOS WEDGE SUMMARY
+
+ !            verify              ! (filename)
+ &            type file           & (filename)
+ #            drive number        # <Drive #>
+ $            directory           $ <pattern> < =s, =p, =l, =u >
+ %            binary load         % (filename)
+ /            normal load         / (filename)
+ *            boot file           * (filename)
+ backarrow    save file           back-arrow (filename)
+ @            drive cmd channel   @ <command>
+
+
+ UTILITY COMMAND SUMMARY
+
+ up-arrow S           single sided        switch 1571 to single sided mode
+ up-arrow D           double sided        switch 1571 to double sided mode
+ up-arrow R<Drive #>  renumber            change device number
+ up-arrow K           kill                kill fast load
+ up-arrow E           enable              reenable fast load & save
+ up-arrow U           un-new              restore basic program
+ up-arrow H           hardcopy            print current screen to printer
+ up-arrow $           disk menu           display directory in menu format
+ up-arrow C           color               restore screen to standard colors
+ C=/runstop           load & run first file on disk
+                      shift / runstop on C128 in 128 mode)
+ pi sign              enter machine language monitor
+ pound key            enter main menu
+
+
+-APPENDIX  V  -
+
+
+ FILE UTILITIES SUMMARY
+
+ move cursor                                     <crsr>
+ toggle highlighted selection                    <spacebar>
+ toggle highlighted selection and move cursor    <return>
+ toggle all files                                <a>
+ toggle remaining files (below cursor)           <r>
+ move cursor to top of directory                 <clr/home>
+ new disk directory                              <up-arrow>
+ start process on selected files                 <s>
+
+
+
+
+ SECTOR EDITOR SUMMARY
+
+ read sector from source drive                   <r> <track> <sector>
+ write sector to target drive                    <w> <track> <sector>
+ move cursor in sector                           <crsr>
+ go forward one sector                           <+>
+ go back one sector                              <->
+ go forward one track                            <shift>-< +>
+                                                 (both keys simultaneously)
+ go back one track                               <shift>-<->
+                                                 (both keys simultaneously)
+ jump to track and sector under cursor           <j>
+ next sector in a file                           <n>
+ enter text mode                                 <t>
+ exit text mode                                  <run/stop>
+ enter ml monitor                                <m>
+ print entire sector                             <p>
+ clear sector from cursor to end                 <shift>-<clr/home>
+                                                 (both keys simultaneously)
+ swap source and target drives                   <spacebar>
+ make target drive equal source drive            <shift>-<spacebar>
+                                                 (both keys simultaneously)
+ quit sector editor                              <q>
+
+
+
+
+
+
+
+
+
+
+
+---------------------
+End of Document
+Reformatted by iAN/HF
+---------------------

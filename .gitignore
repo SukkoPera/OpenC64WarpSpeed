@@ -1,0 +1,6 @@
+*.bak
+*.*-bak
+*.bck
+gerbers/
+RELEASES/
+fp-info-cache

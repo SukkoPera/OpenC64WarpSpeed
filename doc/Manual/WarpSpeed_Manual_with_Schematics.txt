@@ -1,0 +1,19 @@
+
+WarpSpeed V2.0
+
+If you look at the schematic at the end of the manual, you'll
+notice that some of the address and data lines do not match
+between the Expansion Bus and the EPROM. The WarpSpeed team
+probably did this to make the layout of the PCB easier.
+
+When you read the EPROM under normal conditions, the code
+will be mixed up and unreadable when you try to dis-
+assemble it.
+
+If you layout a PCB the same as the WarpSpeed PCB, then
+you will have to use the scrambled code in your EPROM.
+(See C128WarpSpeed_decoder.zip)
+
+
+If you have any questions, you can reach me at:
+newbury@planetkc.com
