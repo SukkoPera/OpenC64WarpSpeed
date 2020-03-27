@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/OpenC64WarpSpeed/OpenC64WarpSpeed.sch)
-    (date "ven 27 mar 2020, 22:54:16")
+    (date "sab 28 mar 2020, 00:12:05")
     (tool "Eeschema 5.1.5")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -128,7 +128,7 @@
       (tstamp 5F7F85EA))
     (comp (ref U2)
       (value 27512)
-      (footprint Package_DIP:DIP-28_W15.24mm)
+      (footprint Package_DIP:DIP-28_W15.24mm_Socket_LongPads)
       (datasheet http://pdf.datasheetcatalog.com/datasheets/120/227190_DS.pdf)
       (libsource (lib Memory_EPROM) (part 27512) (description "UV Erasable EPROM 512 KiBit, [Obsolete 2007-01]"))
       (sheetpath (names /) (tstamps /))

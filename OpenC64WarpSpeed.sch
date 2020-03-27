@@ -937,7 +937,7 @@ U 1 1 5F80FF67
 P 8890 3910
 F 0 "U2" H 9135 4960 50  0000 C CNN
 F 1 "27512" H 9080 2860 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm" H 8890 3910 50  0001 C CNN
+F 2 "Package_DIP:DIP-28_W15.24mm_Socket_LongPads" H 8890 3910 50  0001 C CNN
 F 3 "http://pdf.datasheetcatalog.com/datasheets/120/227190_DS.pdf" H 8890 3910 50  0001 C CNN
 	1    8890 3910
 	1    0    0    -1  
