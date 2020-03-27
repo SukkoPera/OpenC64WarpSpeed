@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Memory_EPROM:27128 U2
-U 1 1 5F59ABE9
-P 8890 3910
-F 0 "U2" H 9125 4960 50  0000 C CNN
-F 1 "27128" H 9080 2855 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm_Socket_LongPads" H 8890 3910 50  0001 C CNN
-F 3 "http://eeshop.unl.edu/pdf/27128.pdf" H 8890 3910 50  0001 C CNN
-	1    8890 3910
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74LS109 U1
 U 1 1 5F59B5C6
 P 5755 3560
@@ -495,7 +484,7 @@ U 1 1 5F59E13E
 P 5165 4800
 F 0 "C1" H 5050 4846 50  0000 R CNN
 F 1 "470n" H 5050 4755 50  0000 R CNN
-F 2 "OpenC64WarpSpeed:C_Disc_D7.5mm_W2.50mm_P7.50mm" H 5203 4650 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 5203 4650 50  0001 C CNN
 F 3 "~" H 5165 4800 50  0001 C CNN
 	1    5165 4800
 	1    0    0    -1  
@@ -512,7 +501,7 @@ U 1 1 5F6132BA
 P 5280 5100
 F 0 "C2" H 5395 5146 50  0000 L CNN
 F 1 "470n" H 5395 5055 50  0000 L CNN
-F 2 "OpenC64WarpSpeed:C_Disc_D7.5mm_W2.50mm_P7.50mm" H 5318 4950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 5318 4950 50  0001 C CNN
 F 3 "~" H 5280 5100 50  0001 C CNN
 	1    5280 5100
 	1    0    0    -1  
@@ -555,22 +544,6 @@ Wire Wire Line
 	9290 3610 9690 3610
 Wire Wire Line
 	9290 3710 9690 3710
-Text Label 9690 3010 2    50   ~ 0
-d4
-Text Label 9690 3110 2    50   ~ 0
-d3
-Text Label 9690 3210 2    50   ~ 0
-d1
-Text Label 9690 3310 2    50   ~ 0
-d0
-Text Label 9690 3410 2    50   ~ 0
-d2
-Text Label 9690 3510 2    50   ~ 0
-d5
-Text Label 9690 3610 2    50   ~ 0
-d6
-Text Label 9690 3710 2    50   ~ 0
-d7
 Entry Wire Line
 	9690 3010 9790 3110
 Entry Wire Line
@@ -647,42 +620,10 @@ Entry Wire Line
 	7990 4110 8090 4210
 Entry Wire Line
 	7990 4210 8090 4310
-Text Label 8090 3010 0    50   ~ 0
-a0
-Text Label 8090 3110 0    50   ~ 0
-a1
-Text Label 8090 3210 0    50   ~ 0
-a3
-Text Label 8090 3310 0    50   ~ 0
-a4
-Text Label 8090 3410 0    50   ~ 0
-a6
-Text Label 8090 3510 0    50   ~ 0
-a8
-Text Label 8090 3610 0    50   ~ 0
-a10
-Text Label 8090 3710 0    50   ~ 0
-a11
-Text Label 8090 3810 0    50   ~ 0
-a9
-Text Label 8090 3910 0    50   ~ 0
-a7
-Text Label 8090 4010 0    50   ~ 0
-a2
-Text Label 8090 4110 0    50   ~ 0
-a5
-Text Label 8090 4210 0    50   ~ 0
-a13
-Text Label 8090 4310 0    50   ~ 0
-a12
 Wire Bus Line
 	7990 4210 7620 4210
 Text Label 7620 4210 0    50   ~ 0
 addr_bus
-Wire Wire Line
-	8490 4510 8395 4510
-Wire Wire Line
-	8395 4510 8395 2230
 $Comp
 L power:+5V #PWR0110
 U 1 1 5F62B802
@@ -708,18 +649,11 @@ F 3 "" H 8890 5095 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8890 5095 8890 5010
-Wire Wire Line
-	8490 4610 8395 4610
-Wire Wire Line
-	8395 4610 8395 4510
-Connection ~ 8395 4510
+	8890 5095 8890 5050
 Wire Wire Line
 	8490 4710 8295 4710
 Wire Wire Line
 	8490 4810 8295 4810
-Wire Wire Line
-	8395 2230 8890 2230
 Connection ~ 8890 2230
 Wire Wire Line
 	8890 2230 8890 2810
@@ -764,16 +698,13 @@ U 1 1 5F66CE22
 P 8295 2450
 F 0 "R1" H 8225 2496 50  0000 R CNN
 F 1 "3.3k" H 8225 2405 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8225 2450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 8225 2450 50  0001 C CNN
 F 3 "~" H 8295 2450 50  0001 C CNN
 	1    8295 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	8295 2300 8295 2230
-Wire Wire Line
-	8295 2230 8395 2230
-Connection ~ 8395 2230
 Wire Wire Line
 	6175 2770 8295 2770
 Connection ~ 8295 2770
@@ -890,6 +821,135 @@ $EndComp
 NoConn ~ 5415 6920
 NoConn ~ 5415 7120
 NoConn ~ 5015 7020
+Text Label 8090 3010 0    50   ~ 0
+a0
+Text Label 8090 3110 0    50   ~ 0
+a1
+Text Label 8090 3210 0    50   ~ 0
+a2
+Text Label 8090 3310 0    50   ~ 0
+a3
+Text Label 8090 3410 0    50   ~ 0
+a4
+Text Label 8090 3510 0    50   ~ 0
+a5
+Text Label 8090 3610 0    50   ~ 0
+a6
+Text Label 8090 3710 0    50   ~ 0
+a7
+Text Label 8090 3810 0    50   ~ 0
+a8
+Text Label 8090 3910 0    50   ~ 0
+a9
+Text Label 8090 4010 0    50   ~ 0
+a10
+Text Label 8090 4110 0    50   ~ 0
+a11
+Text Label 8090 4210 0    50   ~ 0
+a12
+Text Label 8090 4310 0    50   ~ 0
+a13
+Text Label 9690 3010 2    50   ~ 0
+d0
+Text Label 9690 3110 2    50   ~ 0
+d1
+Text Label 9690 3210 2    50   ~ 0
+d2
+Text Label 9690 3310 2    50   ~ 0
+d3
+Text Label 9690 3410 2    50   ~ 0
+d4
+Text Label 9690 3510 2    50   ~ 0
+d5
+Text Label 9690 3610 2    50   ~ 0
+d6
+Text Label 9690 3710 2    50   ~ 0
+d7
+$Comp
+L Device:C C3
+U 1 1 5F7F7C81
+P 3900 6990
+F 0 "C3" H 4015 7036 50  0000 L CNN
+F 1 "100n" H 4015 6945 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 3938 6840 50  0001 C CNN
+F 3 "~" H 3900 6990 50  0001 C CNN
+	1    3900 6990
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5F7F85EA
+P 4325 6990
+F 0 "C4" H 4440 7036 50  0000 L CNN
+F 1 "100n" H 4440 6945 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 4363 6840 50  0001 C CNN
+F 3 "~" H 4325 6990 50  0001 C CNN
+	1    4325 6990
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 6840 3900 6755
+Wire Wire Line
+	3900 6755 4105 6755
+Wire Wire Line
+	4325 6755 4325 6840
+Wire Wire Line
+	3900 7140 3900 7225
+Wire Wire Line
+	3900 7225 4105 7225
+Wire Wire Line
+	4325 7225 4325 7140
+$Comp
+L power:GND #PWR02
+U 1 1 5F803318
+P 4105 7310
+F 0 "#PWR02" H 4105 7060 50  0001 C CNN
+F 1 "GND" H 4110 7137 50  0000 C CNN
+F 2 "" H 4105 7310 50  0001 C CNN
+F 3 "" H 4105 7310 50  0001 C CNN
+	1    4105 7310
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4105 7310 4105 7225
+Connection ~ 4105 7225
+Wire Wire Line
+	4105 7225 4325 7225
+$Comp
+L power:+5V #PWR01
+U 1 1 5F8090BC
+P 4105 6685
+F 0 "#PWR01" H 4105 6535 50  0001 C CNN
+F 1 "+5V" H 4120 6858 50  0000 C CNN
+F 2 "" H 4105 6685 50  0001 C CNN
+F 3 "" H 4105 6685 50  0001 C CNN
+	1    4105 6685
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4105 6685 4105 6755
+Connection ~ 4105 6755
+Wire Wire Line
+	4105 6755 4325 6755
+$Comp
+L Memory_EPROM:27512 U2
+U 1 1 5F80FF67
+P 8890 3910
+F 0 "U2" H 9135 4960 50  0000 C CNN
+F 1 "27512" H 9080 2860 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W15.24mm" H 8890 3910 50  0001 C CNN
+F 3 "http://pdf.datasheetcatalog.com/datasheets/120/227190_DS.pdf" H 8890 3910 50  0001 C CNN
+	1    8890 3910
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8295 2230 8890 2230
+Wire Wire Line
+	8490 4510 8390 4510
+Wire Wire Line
+	8390 4510 8390 5050
+Wire Wire Line
+	8390 5050 8890 5050
 Wire Bus Line
 	4345 4275 4345 4975
 Wire Bus Line
@@ -898,4 +958,7 @@ Wire Bus Line
 	1845 3475 1845 4775
 Wire Bus Line
 	7990 2910 7990 4210
+Connection ~ 8890 5050
+Wire Wire Line
+	8890 5050 8890 5010
 $EndSCHEMATC
