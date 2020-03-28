@@ -58,17 +58,6 @@ F 3 "~" H 5165 2610 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Switch:SW_Push SW2
-U 1 1 5F59F12C
-P 4660 2835
-F 0 "SW2" H 4660 3120 50  0000 C CNN
-F 1 "SW_RESET" H 4660 3029 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 4660 3035 50  0001 C CNN
-F 3 "~" H 4660 3035 50  0001 C CNN
-	1    4660 2835
-	1    0    0    -1  
-$EndComp
-$Comp
 L C64-Exp-Port:C64-Exp-Port P1
 U 1 1 5F59FA19
 P 3095 3925
@@ -134,33 +123,7 @@ Wire Wire Line
 Wire Wire Line
 	2120 3075 2120 2330
 Wire Wire Line
-	2120 2330 4350 2330
-Wire Wire Line
-	4350 2330 4350 2835
-Wire Wire Line
-	4350 2835 4460 2835
-Wire Wire Line
-	4860 2835 4950 2835
-Wire Wire Line
-	4950 2835 4950 2900
-$Comp
-L power:GND #PWR0104
-U 1 1 5F5A976B
-P 4950 2900
-F 0 "#PWR0104" H 4950 2650 50  0001 C CNN
-F 1 "GND" H 4955 2727 50  0000 C CNN
-F 2 "" H 4950 2900 50  0001 C CNN
-F 3 "" H 4950 2900 50  0001 C CNN
-	1    4950 2900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4350 2835 4350 3205
-Wire Wire Line
-	4350 3205 5755 3205
-Wire Wire Line
 	5755 3205 5755 3260
-Connection ~ 4350 2835
 $Comp
 L power:+5V #PWR0105
 U 1 1 5F5B0E12
@@ -649,8 +612,6 @@ F 3 "" H 8890 5095 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8890 5095 8890 5050
-Wire Wire Line
 	8490 4710 8295 4710
 Wire Wire Line
 	8490 4810 8295 4810
@@ -943,16 +904,9 @@ F 3 "http://pdf.datasheetcatalog.com/datasheets/120/227190_DS.pdf" H 8890 3910 5
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8295 2285 8890 2285
+	8295 2285 8390 2285
 Wire Wire Line
 	8490 4510 8390 4510
-Wire Wire Line
-	8390 4510 8390 5050
-Wire Wire Line
-	8390 5050 8890 5050
-Connection ~ 8890 5050
-Wire Wire Line
-	8890 5050 8890 5010
 $Comp
 L Switch:SW_DPDT_x2 SW3
 U 1 1 5F89C548
@@ -1010,6 +964,50 @@ $EndComp
 NoConn ~ 4670 6920
 NoConn ~ 4670 7120
 NoConn ~ 4270 7020
+$Comp
+L power:GND #PWR0104
+U 1 1 5F5A976B
+P 4950 2900
+F 0 "#PWR0104" H 4950 2650 50  0001 C CNN
+F 1 "GND" H 4955 2727 50  0000 C CNN
+F 2 "" H 4950 2900 50  0001 C CNN
+F 3 "" H 4950 2900 50  0001 C CNN
+	1    4950 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2835 4950 2900
+Wire Wire Line
+	4860 2835 4950 2835
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5F59F12C
+P 4660 2835
+F 0 "SW2" H 4660 3120 50  0000 C CNN
+F 1 "SW_RESET" H 4660 3029 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 4660 3035 50  0001 C CNN
+F 3 "~" H 4660 3035 50  0001 C CNN
+	1    4660 2835
+	1    0    0    -1  
+$EndComp
+Connection ~ 4350 2835
+Wire Wire Line
+	4350 3205 5755 3205
+Wire Wire Line
+	4350 2835 4350 3205
+Wire Wire Line
+	4350 2835 4460 2835
+Wire Wire Line
+	4350 2330 4350 2835
+Wire Wire Line
+	2120 2330 4350 2330
+Wire Wire Line
+	8390 4510 8390 2285
+Connection ~ 8390 2285
+Wire Wire Line
+	8390 2285 8890 2285
+Wire Wire Line
+	8890 5010 8890 5095
 Wire Bus Line
 	4345 4275 4345 4975
 Wire Bus Line
