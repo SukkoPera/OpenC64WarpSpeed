@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "OpenC64WarpSpeed"
 Date "2020-03-27"
-Rev "1git"
+Rev "1"
 Comp "SukkoPera"
 Comment1 "Licensed under CERN OHL v.1.2"
 Comment2 "Based on documentation provided by replay resources"
