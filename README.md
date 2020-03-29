@@ -4,27 +4,22 @@ OpenC64WarpSpeed is an Open Hardware Fast Loader cartridge for the Commodore 64 
 ![Board](https://raw.githubusercontent.com/SukkoPera/OpenC64WarpSpeed/master/img/render-top.png)
 
 ## Summary
-OpenC64WarpSpeed is a clone of the *WarpSpeed* cartridge, a Fast Loader cartridge released by the *Alien Technology Group* and distributed by *Cinemaware* in early 1988. It is similar to the better-known *Epyx Fastload* cartridge, but it was a bit late to the party, thus it didn't gain as much fame.
+OpenC64WarpSpeed is a clone of the *WarpSpeed* cartridge, a Fast Loader cartridge released by the *Alien Technology Group* and distributed by *Cinemaware* in early 1988. Its main function is to provide turbo speed to all disk functions, in a similar way to the better-known *Epyx Fastload* cartridge, but it was a bit late to the party, thus it didn't gain as much fame.
 
-It is a 16K cartridge, essentially an updated and expanded successor to the original generation of accelerator cartridges. It provides turbo speed to all disk functions (except scratch and validate) and features a native 128 mode (the only cartridge of its kind to have this), a reset button, and an *old* command. Its track-and-sector editor is particularly useful and extensive; it is integrated well into the flexible ML monitor.
+I learned about the existance of this cartridge when my friend Terje suggest me to watch [this video by Adrian](https://www.youtube.com/watch?v=6bqKQADHF_Y): it outperformed JiffyDOS, so I started to look around for information. This way I found out that it's the only cartridge of its kind to have native support for the Commodore 128 and I even found the original schematics (including the PCB layout!) in the manual. So I just decided to remake it.
 
-I learned about the existance of this cartridge when my friend Terje suggest me to watch [this video by Adrian](https://www.youtube.com/watch?v=6bqKQADHF_Y): it outperformed JiffyDOS, so I started to look around for information. This way I found out about the Commodore 128 support, and I even found the original schematics (including the PCB layout!) in the manual. So I just decided to remake it.
-
-First I sticked to the original schematics and routing, the I did a second version with a few improvements.
+First I sticked to the original schematics and routing, then I did a second version with a few improvements.
 
 ## Functionalities
+OpenC64WarpSpeed, just like the original WarpSpeed, is a 16K cartridge, essentially an updated and expanded successor to the first generation of accelerator cartridges.
 * Fast serial I/O (1541, 1571 and with WarpSpeed v2 also for 1581 floppy disk drives)
 * DOS wedge
 * Monitor (Pi-sign)
 * File and disk copier
 * Disk sector editor
 * Utility commands using arrow up - allowing to kill fastload and OLD
-
-What's missing are a BASIC-toolkit feature and programmed function keys. However, you can still load, save, scratch, and so on, using shorthand commands from the onscreen directory with a minimum of effort.
-
-The single-drive file-copy routines are of limited value because you must swap disks for every file. It's not possible to make more than one copy at a time. On the other hand, both whole-disk copiers are excellent and fast; the 128 version is particularly speedy, usually requiring no more than a single pass. Warp Speed's manual is small though adequate. The programming is not always as clear as it could be: Options on both the Copy and the Track/Sector submenus are confusing. Note that preprogrammed function keys are a mixed blessing. With Warp Speed, as with early accelerator cartridges, it is not difficult to wedge in your own function-key definitions. This is usually impossible with cartridges that preprogram these keys (Super Snapshot is an exception). Also, you can find BASIC Aid packages on disk that will not cause a wedge conflict.
-
-Fortunately for the user, 64 and 128 modes function identically.
+* Native Commodore 128 mode
+* Reset button
 
 ## Assembly
 There are two versions of this cartridge:
