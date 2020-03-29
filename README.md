@@ -34,7 +34,7 @@ If you want to get this board produced, you are recommended to get [the latest r
 
 Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
 
-Releases of the *original* branch get tagged *vXorig*, while improved version get tagged just *vX*.
+Releases of the *original* branch get tagged *vXorig*, while improved versions get tagged just *vX*.
 
 ### License
 *(I am not sure I can claim any copyright on this, as the actual schematics this is based on belong to the *Alien Technology Group* (or whoever has that right now, definitely not me). So the claim below is going to be more of a declaration of intent, in the sense that I would like that everything that is derived from my work stays open and free.)*
