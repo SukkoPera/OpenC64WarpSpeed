@@ -11,7 +11,6 @@ I learned about the existance of this cartridge when my friend Terje suggest me 
 First I sticked to the original schematics and routing, then I did a second version with a few improvements.
 
 ## Functionalities
-OpenC64WarpSpeed, just like the original WarpSpeed, is a 16K cartridge, essentially an updated and expanded successor to the first generation of accelerator cartridges.
 * Fast serial I/O (1541, 1571 and with WarpSpeed v2 also for 1581 floppy disk drives)
 * DOS wedge
 * Monitor (Pi-sign)
@@ -23,8 +22,8 @@ OpenC64WarpSpeed, just like the original WarpSpeed, is a 16K cartridge, essentia
 
 ## Assembly
 There are two versions of this cartridge:
-- The version on the *original* branch is an almost 1:1 copy of the original PCB. The only changes are to fit a switch and a pushbutton that are common these days. If you use this card, you will need to flash the *scrambled* ROM. You are supposed to use a 27128 EPROM with this, but you can use a 27C512 EEPROM by putting the ROM in the upmost 16K. To make it easier: just concatenate the ROM to itself 4 times (until it's 64K) and flash that file.
-- The version on the *master* branch has some improvements. First of all, the address and data lines have been unscrambled, so you will need to flash the *unscrambled* ROM. Actually you can use two ROMs, which you can switch with *SW3*. You can either use a 27256 or 27512 EPROM (use the upper 32K with the latter). Other small improvements include putting decoupling caps on the EPROM and flip-flop ICs, and using a ground plane.
+- The version on the *original* branch is an almost 1:1 copy of the original PCB. The only changes are to fit a switch and a pushbutton that are common these days. If you use this card, you will need to flash the *scrambled* ROMs. You are supposed to use a 27128 EPROM with this, but you can use a 27C512 EEPROM by putting the ROM in the upmost 16K. To make it easier: just concatenate the ROM to itself 4 times (until it's 64K) and flash that file.
+- The version on the *master* branch has some improvements. First of all, the address and data lines have been unscrambled, so you will need to flash the *unscrambled* ROMs. Actually you can use two ROMs at the same time, you can switch between them with *SW3*. You can either use a 27256 or 27512 EPROM (use the upper 32K on the latter). Other small improvements include decoupling caps on the EPROM and flip-flop ICs and using a ground plane.
 
 I admit it is not clear at all to me how this cartridge does its job but, as far as I know, this kind of cartridges play nasty tricks with the control lines, therefore I recommend sticking to the original values, as they might influence the timing of signals.
 
@@ -33,7 +32,11 @@ If you want to get this board produced, you are recommended to get [the latest r
 
 Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
 
+Releases of the *original* branch get tagged *vXorig*, while improved version get tagged just *vX*.
+
 ### License
+*(I am not sure I can claim any copyright on this, as the actual schematics this is based on belong to the *Alien Technology Group* (or whoever has that right now, definitely not me). So the claim below is going to be more of a declaration of intent, in the sense that I would like that everything that is derived from my work stays open and free.)*
+
 The OpenC64WarpSpeed documentation, including the design itself, is copyright &copy; SukkoPera 2020.
 
 OpenC64WarpSpeed is Open Hardware licensed under the [CERN OHL v. 1.2](http://ohwr.org/cernohl).
