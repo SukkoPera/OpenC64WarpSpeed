@@ -22,8 +22,10 @@ First I sticked to the original schematics and routing, then I did a second vers
 
 ## Assembly
 There are two versions of this cartridge:
-- The version on the *original* branch is an almost 1:1 copy of the original PCB. The only changes are to fit a switch and a pushbutton that are common these days. If you use this card, you will need to flash the *scrambled* ROMs. You are supposed to use a 27128 EPROM with this, but you can use a 27C512 EEPROM by putting the ROM in the upmost 16K. To make it easier: just concatenate the ROM to itself 4 times (until it's 64K) and flash that file.
+- The version on the *original* branch is an almost 1:1 copy of the original PCB. The only changes are to fit a switch and a pushbutton that are common these days. If you use this card, you will need to flash the *raw* ROMs. You are supposed to use a 27128 EPROM with this, but you can use a 27C512 EEPROM by putting the ROM in the upmost 16K. To make it easier: just concatenate the ROM to itself 4 times (until it's 64K) and flash that file.
 - The version on the *master* branch has some improvements. First of all, the address and data lines have been unscrambled, so you will need to flash the *unscrambled* ROMs. Actually you can use two ROMs at the same time, you can switch between them with *SW3*. You can either use a 27256 or 27512 EPROM (use the upper 32K on the latter). Other small improvements include decoupling caps on the EPROM and flip-flop ICs and using a ground plane.
+
+ROM files are available [in the ROMs folder](https://github.com/SukkoPera/OpenC64WarpSpeed/blob/ROMs/).
 
 I admit it is not clear at all to me how this cartridge does its job but, as far as I know, this kind of cartridges play nasty tricks with the control lines, therefore I recommend sticking to the original values, as they might influence the timing of signals.
 
