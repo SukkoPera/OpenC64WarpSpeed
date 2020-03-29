@@ -1,13 +1,13 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/OpenC64WarpSpeed/OpenC64WarpSpeed.sch)
-    (date "sab 28 mar 2020, 01:54:08")
+    (date "dom 29 mar 2020, 20:08:24")
     (tool "Eeschema 5.1.5")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title OpenC64WarpSpeed)
         (company SukkoPera)
-        (rev 1git)
+        (rev 1)
         (date 2020-03-27)
         (source OpenC64WarpSpeed.sch)
         (comment (number 1) (value "Licensed under CERN OHL v.1.2"))
@@ -138,7 +138,13 @@
       (datasheet ~)
       (libsource (lib Switch) (part SW_Push) (description "Push button switch, generic, two pins"))
       (sheetpath (names /) (tstamps /))
-      (tstamp 5F59F12C)))
+      (tstamp 5F59F12C))
+    (comp (ref V0)
+      (value OSHW_LOGO)
+      (footprint Symbol:OSHW-Logo_7.5x8mm_Copper)
+      (libsource (lib void) (part Void) (description ""))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5E82A261)))
   (libparts
     (libpart (lib 74xx) (part 74LS109)
       (description "Dual JK Flip-Flop, Set & Reset")
@@ -323,7 +329,11 @@
         (field (name Value) SW_Push))
       (pins
         (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive)))))
+        (pin (num 2) (name 2) (type passive))))
+    (libpart (lib void) (part Void)
+      (fields
+        (field (name Reference) V)
+        (field (name Value) Void))))
   (libraries
     (library (logical 74xx)
       (uri /usr/share/kicad/library/74xx.lib))
@@ -336,7 +346,9 @@
     (library (logical Memory_EPROM)
       (uri /usr/share/kicad/library/Memory_EPROM.lib))
     (library (logical Switch)
-      (uri /usr/share/kicad/library/Switch.lib)))
+      (uri /usr/share/kicad/library/Switch.lib))
+    (library (logical void)
+      (uri /home/sukko/Documents/kicad/OpenC64WarpSpeed/libs/void.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref SW2) (pin 2))

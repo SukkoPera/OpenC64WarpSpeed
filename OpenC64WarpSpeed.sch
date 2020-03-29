@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenC64WarpSpeed"
-Date "2020-03-27"
+Date "2020-03-29"
 Rev "1"
 Comp "SukkoPera"
 Comment1 "Licensed under CERN OHL v.1.2"
@@ -1008,6 +1008,28 @@ Wire Wire Line
 	8390 2285 8890 2285
 Wire Wire Line
 	8890 5010 8890 5095
+$Comp
+L void:Void V0
+U 1 1 5E82A261
+P 10450 5495
+F 0 "V0" H 10528 5541 50  0000 L CNN
+F 1 "OSHW_LOGO" H 10528 5450 50  0000 L CNN
+F 2 "Symbol:OSHW-Logo_7.5x8mm_Copper" H 10450 5495 50  0001 C CNN
+F 3 "" H 10450 5495 50  0001 C CNN
+	1    10450 5495
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO?
+U 1 1 5E833734
+P 10925 6870
+F 0 "#LOGO?" H 10925 7145 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10925 6645 50  0001 C CNN
+F 2 "" H 10925 6870 50  0001 C CNN
+F 3 "~" H 10925 6870 50  0001 C CNN
+	1    10925 6870
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	4345 4275 4345 4975
 Wire Bus Line

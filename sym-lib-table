@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name C64-Exp-Port)(type Legacy)(uri ${KIPRJMOD}/libs/C64-Exp-Port.lib)(options "")(descr ""))
+  (lib (name void)(type Legacy)(uri ${KIPRJMOD}/libs/void.lib)(options "")(descr ""))
 )
