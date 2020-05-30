@@ -1,7 +1,7 @@
 # WarpSpeed ROM Images
 
 ## Raw Images
-The [raw](raw/) directory contains *raw* images. These images are sort of "scrambled", probably in order to avoid having to manufacture a board with vias, which (I guess) was rather expensive in the '80s/'90s.
+The [Raw](Raw/) directory contains *raw* images. These images are sort of "scrambled", probably in order to avoid having to manufacture a board with vias, which (I guess) was rather expensive in the '80s/'90s.
 
 These images MUST be used with the *original* branch/releases of this project.
 
