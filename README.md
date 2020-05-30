@@ -56,9 +56,11 @@ Any modifications made by Licensees (see section 3.4.b) shall be recorded in fil
 The Documentation Location of the original project is https://github.com/SukkoPera/OpenC64WarpSpeed/.
 
 ## Support the Project
-If you want to support the project, you can order the boards from PCBWay through this link:
+If you want to support the project, you can order the boards from PCBWay through these links:
 
 [![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/OpenC64WarpSpeed_V1.html)
+
+[![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/OpenC64WarpSpeed_Original_Edition_V1.html)
 
 You get my gratitude and cheap, good quality PCBs, professionally-made. I get some credit that will help with this and [other projects](https://www.pcbway.com/project/member/shareproject/?bmbid=41100). You won't even have to worry about the various PCB options, it's all pre-configured for you!
 
