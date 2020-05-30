@@ -10,7 +10,7 @@ I learned about the existance of this cartridge when my friend Terje suggest me 
 
 First I sticked to the original schematics and routing, then I did a second version with a few improvements.
 
-## Functionalities
+## Features
 * Fast serial I/O (1541, 1571 and with WarpSpeed v2 also for 1581 floppy disk drives)
 * DOS wedge
 * Monitor (Pi-sign)
@@ -27,17 +27,19 @@ There are two versions of this cartridge:
 
 ROM files are available [in the ROMs folder](https://github.com/SukkoPera/OpenC64WarpSpeed/tree/master/ROMs).
 
-I admit it is not clear at all to me how this cartridge does its job but, as far as I know, this kind of cartridges play nasty tricks with the control lines, therefore I recommend sticking to the original values, as they might influence the timing of signals.
+I admit it is not clear at all to me how this cartridge does its job but, as far as I know, all cartridges of this kind play nasty tricks with the control lines, therefore I recommend sticking to the original values for all components, as they might influence the timing of signals.
 
-### Releases
+## Releases
 If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/OpenC64WarpSpeed/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
 
 Every release is accompanied by its Bill Of Materials (BOM) file and any relevant notes about it, which you are recommended to read carefully.
 
 Releases of the *original* branch get tagged *vXorig*, while improved versions get tagged just *vX*.
 
-### License
-*(I am not sure I can claim any copyright on this, as the actual schematics this is based on belong to the *Alien Technology Group* (or whoever has that right now, definitely not me). So the claim below is going to be more of a declaration of intent, in the sense that I would like that everything that is derived from my work stays open and free.)*
+**I am not providing ready-to-use gerber files**. If all you want is **to get boards made, I would really appreciate if you did so [in a way that supports the project](#support-the-project)**.
+
+## License
+*(I am not sure I can claim any copyright on this, as the actual schematics this is based on belong to the *Alien Technology Group* - or whoever has that right now, definitely not me. So the claim below is going to be more of a declaration of intent, in the sense that I would like that everything that is derived from my work stays open and free.)*
 
 The OpenC64WarpSpeed documentation, including the design itself, is copyright &copy; SukkoPera 2020.
 
@@ -53,23 +55,26 @@ Any modifications made by Licensees (see section 3.4.b) shall be recorded in fil
 
 The Documentation Location of the original project is https://github.com/SukkoPera/OpenC64WarpSpeed/.
 
-### Support the Project
-Since the project is open you are free to get the PCBs made by your preferred manufacturer, however in case you want to support the development, you can order them from PCBWay through this link:
+## Support the Project
+If you want to support the project, you can order the boards from PCBWay through this link:
 
 [![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/OpenC64WarpSpeed_V1.html)
 
-You get my gratitude and cheap, professionally-made and good quality PCBs, I get some credit that will help with this and [other projects](https://www.pcbway.com/project/member/shareproject/?bmbid=41100). You won't even have to worry about the various PCB options, it's all pre-configured for you!
+You get my gratitude and cheap, good quality PCBs, professionally-made. I get some credit that will help with this and [other projects](https://www.pcbway.com/project/member/shareproject/?bmbid=41100). You won't even have to worry about the various PCB options, it's all pre-configured for you!
 
 Also, if you still have to register to that site, [you can use this link](https://www.pcbway.com/setinvite.aspx?inviteid=41100) to get some bonus initial credit (and yield me some more).
 
-Again, if you want to use another manufacturer, feel free to, don't feel obligated :). But then you can buy me a coffee if you want:
+You can also buy me a coffee if you want:
 
 <a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-### Get Help
-If you need help or have questions, you can join [the official Telegram group](https://t.me/joinchat/HUHdWBC9J9JnYIrvTYfZmg).
+## Get Help
+If you need help or have any questions or suggestions, you can join `#OpenRetroWorks` on FreeNode through your favorite IRC client or [the webchat](https://webchat.freenode.net/), or [the official Telegram group](https://t.me/joinchat/HUHdWBC9J9JnYIrvTYfZmg).
 
-### Thanks
+## Dedication
+This project is dedicated to my friend Terje, who let me know about this cartridge. I hope this makes it easier for you to fight your battle :).
+
+## Thanks
 - replay resources for [hosting the documentation](https://rr.pokefinder.org/wiki/WarpSpeed) that allowed the recreation of this cartridge.
 - iAN CooG for decoding the ROMs.
 - MayhemUK64 for providing [a review of the original cartridge](http://www.mayhem64.co.uk/cartpower.htm), which was integrated in the text above.
