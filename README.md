@@ -74,7 +74,7 @@ You can also buy me a coffee if you want:
 If you need help or have any questions or suggestions, you can join `#OpenRetroWorks` on FreeNode through your favorite IRC client or [the webchat](https://webchat.freenode.net/), or [the official Telegram group](https://t.me/joinchat/HUHdWBC9J9JnYIrvTYfZmg).
 
 ## Dedication
-This project is dedicated to my friend Terje, who let me know about this cartridge. I hope this makes it easier for you to fight your battle :).
+This project is dedicated to my friend Terje, who let me know about this cartridge and tested the boards. I hope this makes it easier for you to fight your battle :).
 
 ## Thanks
 - replay resources for [hosting the documentation](https://rr.pokefinder.org/wiki/WarpSpeed) that allowed the recreation of this cartridge.
