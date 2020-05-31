@@ -55,6 +55,11 @@ Any modifications made by Licensees (see section 3.4.b) shall be recorded in fil
 
 The Documentation Location of the original project is https://github.com/SukkoPera/OpenC64WarpSpeed/.
 
+## Selling the board
+**The license allows you to sell these boards**. I have nothing against that **as long as you do so at an "ethical" price**. I understand you want to make some money, but please note that you are getting this all for free, you had no development costs and you invested no time in this project. You are making money with someone else's work, who has the desire to allow everybody to have a board at a REASONABLE price, so please keep your margin low. I estimate that **having a few of these boards produced and assembled costs about 3€ per board**, so let me add the following restriction: **if this board is sold at more than 8€ (or equivalent in your currency), I strongly encourage you to donate 25% of your earning to a LEGITIMATE charity** of some kind, like curing cancer for example. This amount has been set in May 2020 and will be updated, should the value of the Euro vary significantly.
+
+Also, please **do not remove the credits, URL and license statement**. There is **no reason do so**, you have the right to sell this board, there is no need to pretend you got it somewhere else. Ironically, If you removed those, you'd lose that right as you'd be violating the license terms.
+
 ## Support the Project
 If you want to support the project, you can order the boards from PCBWay through these links:
 
