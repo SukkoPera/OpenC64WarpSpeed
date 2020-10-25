@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenC64WarpSpeed"
-Date "2020-03-29"
+Date "2020-10-25"
 Rev "1"
 Comp "SukkoPera"
 Comment1 "Licensed under CERN OHL v.1.2"
