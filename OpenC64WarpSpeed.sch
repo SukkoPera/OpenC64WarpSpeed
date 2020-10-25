@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenC64WarpSpeed"
-Date "2020-03-27"
+Date "2020-10-25"
 Rev "1orig"
 Comp "SukkoPera"
 Comment1 "Licensed under CERN OHL v.1.2"
@@ -494,7 +494,7 @@ L Device:C C1
 U 1 1 5F59E13E
 P 5165 4800
 F 0 "C1" H 5050 4846 50  0000 R CNN
-F 1 "470n" H 5050 4755 50  0000 R CNN
+F 1 "47p" H 5050 4755 50  0000 R CNN
 F 2 "OpenC64WarpSpeed:C_Disc_D7.5mm_W2.50mm_P7.50mm" H 5203 4650 50  0001 C CNN
 F 3 "~" H 5165 4800 50  0001 C CNN
 	1    5165 4800
@@ -511,7 +511,7 @@ L Device:C C2
 U 1 1 5F6132BA
 P 5280 5100
 F 0 "C2" H 5395 5146 50  0000 L CNN
-F 1 "470n" H 5395 5055 50  0000 L CNN
+F 1 "47p" H 5395 5055 50  0000 L CNN
 F 2 "OpenC64WarpSpeed:C_Disc_D7.5mm_W2.50mm_P7.50mm" H 5318 4950 50  0001 C CNN
 F 3 "~" H 5280 5100 50  0001 C CNN
 	1    5280 5100
