@@ -20,6 +20,8 @@ First I sticked to the original schematics and routing, then I did a second vers
 * Native Commodore 128 mode
 * Reset button
 
+Check out [this page on World of Jani](http://blog.worldofjani.com/?p=5043) and  [this nice page and video by Obliterator918](https://www.obliterator918.com/the-warp-speed-cartridge-from-cinemaware-is-nice/) for more information about the features of this cartridge.
+
 ## Assembly
 There are two versions of this cartridge:
 - The version on the *original* branch is an almost 1:1 copy of the original PCB. The only changes are to fit a switch and a pushbutton that are common these days. If you use this card, you will need to flash the *raw* ROMs. You are supposed to use a 27128 EPROM with this, but you can use a 27C512 EEPROM by putting the ROM in the upmost 16K. To make it easier: just concatenate the ROM to itself 4 times (until it's 64K) and flash that file.
@@ -37,6 +39,9 @@ Every release is accompanied by its Bill Of Materials (BOM) file and any relevan
 Releases of the *original* branch get tagged *vXorig*, while improved versions get tagged just *vX*.
 
 **I am not providing ready-to-use gerber files**. If all you want is **to get boards made, I would really appreciate if you did so [in a way that supports the project](#support-the-project)**.
+
+## Enclosure
+A 3D-printable enclosure is currently available for this board, it was kindly contributed by Alexander Schupp and it is available in the [enclosure](./enclosure) folder.
 
 ## License
 *(I am not sure I can claim any copyright on this, as the actual schematics this is based on belong to the *Alien Technology Group* - or whoever has that right now, definitely not me. So the claim below is going to be more of a declaration of intent, in the sense that I would like that everything that is derived from my work stays open and free.)*
