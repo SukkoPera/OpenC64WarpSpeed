@@ -3,9 +3,10 @@ OpenC64WarpSpeed is an Open Hardware Fast Loader cartridge for the Commodore 64 
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/OpenC64WarpSpeed/master/img/render-top.png)
 
-## !!!IMPORTANT!!! THIS CART CURRENTLY HAS A DESIGN FLAW THAT MIGHT CAUSE DAMAGE TO IT OR TO YOUR C64 - PLEASE DO NOT USE!
-
-See [#3](https://github.com/SukkoPera/OpenC64WarpSpeed/issues/3) for more information.
+> [!CAUTION]
+> **THIS CART CURRENTLY HAS A DESIGN FLAW THAT MIGHT CAUSE DAMAGE TO IT OR TO YOUR C64 - PLEASE DO NOT USE!**
+>
+> See [#3](https://github.com/SukkoPera/OpenC64WarpSpeed/issues/3) for more information.
 
 ## Summary
 OpenC64WarpSpeed is a clone of the *WarpSpeed* cartridge, a Fast Loader cartridge released by the *Alien Technology Group* and distributed by *Cinemaware* in early 1988. Its main function is to provide turbo speed to all disk functions, in a similar way to the better-known *Epyx Fastload* cartridge. Since it was a bit late to the party, it didn't gain as much fame.
